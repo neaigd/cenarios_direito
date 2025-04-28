@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impactos no Ensino Jurídico (Cenário de Curto Prazo)</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(to right, #1a365d, #2d3748);
+            color: white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+        .slide-header {
+            padding: 2.5rem 3rem 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 10;
+        }
+        .slide-content {
+            flex: 1;
+            padding: 2rem 3rem;
+            z-index: 10;
+            display: flex;
+            gap: 3rem;
+        }
+        .pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            opacity: 0.05;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .impact-column {
+            flex: 1;
+        }
+        .visual-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .impact-card {
+            background-color: rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #4299e1;
+            transition: all 0.3s ease;
+        }
+        .impact-card:hover {
+            transform: translateX(5px);
+            background-color: rgba(255, 255, 255, 0.12);
+        }
+        .education-transformation {
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 2rem;
+            height: calc(100% - 4rem);
+        }
+        .comparison-row {
+            display: flex;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        .comparison-row:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            bottom: -1rem;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .comparison-column {
+            flex: 1;
+            padding: 0 0.5rem;
+        }
+        .comparison-title {
+            text-align: center;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        .comparison-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: rgba(66, 153, 225, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 1rem;
+        }
+        .highlight-box {
+            background-color: rgba(66, 153, 225, 0.15);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            display: flex;
+            align-items: center;
+        }
+        .transformation-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 1rem;
+        }
+        .arrow-line {
+            flex-grow: 1;
+            height: 2px;
+            background-color: rgba(66, 153, 225, 0.5);
+        }
+        .arrow-head {
+            width: 0;
+            height: 0;
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+            border-left: 10px solid rgba(66, 153, 225, 0.5);
+        }
+        .center-circle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px dashed rgba(66, 153, 225, 0.5);
+            margin: 0 10px;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="pattern"></div>
+        <div class="slide-header">
+            <h1 class="text-3xl font-semibold tracking-wide">Impactos no Ensino Jurídico</h1>
+            <p class="text-gray-400 mt-1">Cenário 1: AGI em Curto Prazo (2-5 Anos)</p>
+            <div class="h-1 w-20 bg-blue-400 mt-2"></div>
+        </div>
+        <div class="slide-content">
+            <div class="impact-column">
+                <h2 class="text-xl font-medium mb-4 text-blue-300">Transformações no Ensino do Direito</h2>
+                
+                <div class="impact-card">
+                    <h3 class="text-lg font-medium mb-2">
+                        <i class="fas fa-robot text-blue-400 mr-2"></i>
+                        Tutores de IA Personalizados
+                    </h3>
+                    <p class="text-sm text-gray-300">
+                        IA se tornaria "tutores privados" extremamente eficazes, capazes de identificar e corrigir mal-entendidos específicos de cada aluno, acelerando o aprendizado em até 3-4 vezes.
+                    </p>
+                </div>
+                
+                <div class="impact-card">
+                    <h3 class="text-lg font-medium mb-2">
+                        <i class="fas fa-university text-blue-400 mr-2"></i>
+                        Transformação Institucional
+                    </h3>
+                    <p class="text-sm text-gray-300">
+                        O sistema universitário jurídico poderia ser profundamente impactado. Enquanto a pesquisa original em grupos de ponta poderia sobreviver, a forma como o conhecimento jurídico é transmitido e absorvido mudaria drasticamente.
+                    </p>
+                </div>
+                
+                <div class="impact-card">
+                    <h3 class="text-lg font-medium mb-2">
+                        <i class="fas fa-book text-blue-400 mr-2"></i>
+                        Revolução Curricular
+                    </h3>
+                    <p class="text-sm text-gray-300">
+                        O currículo jurídico precisaria se adaptar rapidamente para focar em como trabalhar com sistemas de IA, nas implicações éticas e legais da própria IA, e no desenvolvimento de habilidades humanas que a AGI ainda não possui.
+                    </p>
+                </div>
+                
+                <div class="impact-card">
+                    <h3 class="text-lg font-medium mb-2">
+                        <i class="fas fa-graduation-cap text-blue-400 mr-2"></i>
+                        Novas Competências
+                    </h3>
+                    <p class="text-sm text-gray-300">
+                        Foco na formação de profissionais que combinem compreensão tecnológica com capacidades exclusivamente humanas: pensamento crítico, inteligência emocional, ética aplicada e criatividade.
+                    </p>
+                </div>
+                
+                <div class="highlight-box">
+                    <i class="fas fa-lightbulb text-yellow-400 text-2xl mr-4"></i>
+                    <p class="text-sm">
+                        A velocidade da transição exigirá requalificação contínua de professores e profissionais, com faculdades de Direito potencialmente se transformando em centros de inovação em Legal Tech e Direito da IA.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="visual-column">
+                <div class="education-transformation">
+                    <h3 class="text-xl font-medium mb-6 text-center text-blue-300">Transformação do Ensino Jurídico</h3>
+                    
+                    <div class="comparison-row">
+                        <div class="comparison-column">
+                            <div class="comparison-title text-blue-300">Ensino Tradicional</div>
+                            <div class="comparison-icon">
+                                <i class="fas fa-chalkboard-teacher text-blue-400 text-xl"></i>
+                            </div>
+                            <ul class="text-sm text-gray-300 space-y-2">
+                                <li>• Aulas expositivas em massa</li>
+                                <li>• Memorização de leis e códigos</li>
+                                <li>• Avaliações padronizadas</li>
+                                <li>• Feedback limitado e tardio</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="transformation-arrow">
+                            <div class="arrow-line"></div>
+                            <div class="center-circle">
+                                <i class="fas fa-sync-alt text-blue-400"></i>
+                            </div>
+                            <div class="arrow-line"></div>
+                            <div class="arrow-head"></div>
+                        </div>
+                        
+                        <div class="comparison-column">
+                            <div class="comparison-title text-blue-300">Ensino Potencializado por IA</div>
+                            <div class="comparison-icon">
+                                <i class="fas fa-brain text-blue-400 text-xl"></i>
+                            </div>
+                            <ul class="text-sm text-gray-300 space-y-2">
+                                <li>• Tutoria personalizada em tempo real</li>
+                                <li>• Foco em raciocínio e aplicação</li>
+                                <li>• Simulações avançadas de casos</li>
+                                <li>• Feedback constante e adaptativo</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="comparison-row">
+                        <div class="comparison-column">
+                            <div class="comparison-title text-blue-300">Foco Atual</div>
+                            <ul class="text-sm text-gray-300 space-y-2">
+                                <li>• Domínio de precedentes</li>
+                                <li>• Técnicas de pesquisa manual</li>
+                                <li>• Redação jurídica tradicional</li>
+                                <li>• Interpretação de textos legais</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="transformation-arrow">
+                            <div class="arrow-line"></div>
+                            <div class="center-circle">
+                                <i class="fas fa-arrow-right text-blue-400"></i>
+                            </div>
+                            <div class="arrow-line"></div>
+                            <div class="arrow-head"></div>
+                        </div>
+                        
+                        <div class="comparison-column">
+                            <div class="comparison-title text-blue-300">Novo Foco</div>
+                            <ul class="text-sm text-gray-300 space-y-2">
+                                <li>• Colaboração homem-máquina</li>
+                                <li>• Supervisão e validação da IA</li>
+                                <li>• Direito da IA e Ethics Tech</li>
+                                <li>• Habilidades exclusivamente humanas</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 p-4 bg-blue-900 bg-opacity-30 rounded-lg border border-blue-700 text-center">
+                        <p class="text-base text-gray-300">
+                            <i class="fas fa-quote-left text-blue-400 mr-2 opacity-50"></i>
+                            O ensino jurídico adaptado à era da AGI criará uma nova geração de profissionais que não apenas usam ferramentas de IA, mas compreendem profundamente sua lógica, limitações e implicações éticas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div id="navigation" style="position: fixed; bottom: 10px; right: 10px; z-index: 1000; background-color: rgba(255, 255, 255, 0.8); padding: 5px; border-radius: 5px;"></div>
+<script>
+    (function() {
+        const totalSlides = 15;
+        const path = window.location.pathname;
+        const filename = path.substring(path.lastIndexOf('/') + 1);
+        const match = filename.match(/^(\d{3})_cenarios\.html$/);
+
+        if (!match) return;
+
+        const currentSlide = parseInt(match[1], 10);
+        const navContainer = document.getElementById('navigation');
+
+        if (!navContainer) return;
+
+        let prevHtml = '';
+        let nextHtml = '';
+
+        if (currentSlide > 0) {
+            const prevSlideNum = (currentSlide - 1).toString().padStart(3, '0');
+            prevHtml = `<a href="${prevSlideNum}_cenarios.html" style="text-decoration: none; margin-right: 10px;">< Anterior</a>`;
+        } else {
+            prevHtml = `<span style="color: grey; margin-right: 10px;">< Anterior</span>`;
+        }
+
+        if (currentSlide < totalSlides - 1) {
+            const nextSlideNum = (currentSlide + 1).toString().padStart(3, '0');
+            nextHtml = `<a href="${nextSlideNum}_cenarios.html" style="text-decoration: none;">Próximo ></a>`;
+        } else {
+            nextHtml = `<span style="color: grey;">Próximo ></span>`;
+        }
+
+        navContainer.innerHTML = prevHtml + nextHtml;
+    })();
+</script>
+</body>
+</html>

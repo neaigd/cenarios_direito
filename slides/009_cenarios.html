@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impactos na Pesquisa e Ensino Jurídico (Cenário de Longo Prazo)</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(to right, #1a365d, #2d3748);
+            color: white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+        .slide-header {
+            padding: 2.5rem 3rem 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 10;
+        }
+        .slide-content {
+            flex: 1;
+            padding: 2rem 3rem;
+            z-index: 10;
+            display: flex;
+            gap: 3rem;
+        }
+        .pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            opacity: 0.05;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .research-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .education-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .impact-card {
+            background-color: rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        .impact-card.research {
+            border-left: 4px solid #9f7aea;
+        }
+        .impact-card.education {
+            border-left: 4px solid #4299e1;
+        }
+        .impact-card:hover {
+            transform: translateY(-5px);
+            background-color: rgba(255, 255, 255, 0.12);
+        }
+        .comparison-box {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .comparison-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .comparison-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        .comparison-icon {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(66, 153, 225, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+        }
+        .highlight-box {
+            background-color: rgba(159, 122, 234, 0.15);
+            border-left: 4px solid #9f7aea;
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="pattern"></div>
+        <div class="slide-header">
+            <h1 class="text-3xl font-semibold tracking-wide">Impactos na Pesquisa e Ensino Jurídico</h1>
+            <p class="text-gray-400 mt-1">Cenário 2: AGI em Longo Prazo (Mais de 5-10 Anos)</p>
+            <div class="h-1 w-20 bg-purple-400 mt-2"></div>
+        </div>
+        <div class="slide-content">
+            <div class="research-column">
+                <h2 class="text-xl font-medium mb-4 text-purple-300">
+                    <i class="fas fa-search mr-2"></i>Impactos na Pesquisa Jurídica
+                </h2>
+                
+                <div class="impact-card research">
+                    <h3 class="text-lg font-medium mb-2">
+                        <i class="fas fa-file-search text-purple-400 mr-2"></i>
+                        Ferramentas de Busca Especializadas
+                    </h3>
+                    <p class="text-sm text-gray-300">
+                        Ferramentas de IA seriam excelentes para busca, resumo e análise preliminar de grandes volumes de textos legais, aumentando significativamente a eficiência da pesquisa.
+                    </p>
+                </div>
+                
+                <div class="impact-card research">
+                    <h3 class="text-lg font-medium mb-2">
+                        <i class="fas fa-chart-network text-purple-400 mr-2"></i>
+                        Identificação de Padrões
+                    </h3>
+                    <p class="text-sm text-gray-300">
+                        IA poderia ajudar a identificar padrões ou tendências em dados jurídicos, mas a formulação de novas teorias ou hipóteses complexas ainda seria domínio humano.
+                    </p>
+                </div>
+                
+                <div class="impact-card research">
+                    <h3 class="text-lg font-medium mb-2">
+                        <i class="fas fa-tachometer-alt text-purple-400 mr-2"></i>
+                        Aceleração do Processo
+                    </h3>
+                    <p class="text-sm text-gray-300">
+                        A pesquisa seria acelerada pela automação de partes do processo, mas a síntese criativa e o raciocínio profundo continuariam dependendo da capacidade humana.
+                    </p>
+                </div>
+                
+                <div class="highlight-box">
+                    <div class="flex items-start">
+                        <i class="fas fa-lightbulb text-yellow-400 mt-1 mr-3 text-xl"></i>
+                        <p class="text-sm">
+                            Diferentemente do cenário de curto prazo, aqui a IA seria mais uma ferramenta de apoio que aprimora capacidades humanas, em vez de substituí-las. A pesquisa jurídica manteria sua natureza humana enquanto ganharia em eficiência e alcance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="education-column">
+                <h2 class="text-xl font-medium mb-4 text-blue-300">
+                    <i class="fas fa-graduation-cap mr-2"></i>Impactos no Ensino Jurídico
+                </h2>
+                
+                <div class="comparison-box">
+                    <h3 class="text-lg font-medium mb-3 text-center text-blue-300">Evolução Progressiva do Ensino</h3>
+                    
+                    <div class="comparison-item">
+                        <div class="comparison-icon">
+                            <i class="fas fa-robot text-blue-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-base font-medium">Tutoria Personalizada</h4>
+                            <p class="text-xs text-gray-300">
+                                Ferramentas de tutoria baseadas em IA se tornariam mais comuns, oferecendo suporte personalizado em tópicos específicos, complementando (não substituindo) o ensino tradicional.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="comparison-item">
+                        <div class="comparison-icon">
+                            <i class="fas fa-tools text-blue-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-base font-medium">Uso Eficaz de Ferramentas</h4>
+                            <p class="text-xs text-gray-300">
+                                O ensino se concentraria em como usar as ferramentas de IA existentes de forma eficaz e ética, e na análise crítica dos resultados gerados por IA.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="comparison-item">
+                        <div class="comparison-icon">
+                            <i class="fas fa-users text-blue-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-base font-medium">Valorização de Habilidades Humanas</h4>
+                            <p class="text-xs text-gray-300">
+                                Habilidades como negociação, argumentação oral, pensamento estratégico e empatia se tornariam ainda mais importantes, pois são áreas onde a IA (neste cenário) seria menos capaz.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="impact-card education">
+                    <h3 class="text-lg font-medium mb-2">
+                        <i class="fas fa-sync-alt text-blue-400 mr-2"></i>
+                        Adaptação Curricular Gradual
+                    </h3>
+                    <p class="text-sm text-gray-300">
+                        Os currículos jurídicos evoluiriam para incluir componentes tecnológicos, mas manteriam forte ênfase na formação jurídica tradicional, com transição gradual que permitiria adaptação institucional.
+                    </p>
+                </div>
+                
+                <div class="impact-card education">
+                    <h3 class="text-lg font-medium mb-2">
+                        <i class="fas fa-shield-alt text-blue-400 mr-2"></i>
+                        Foco na Supervisão e Validação
+                    </h3>
+                    <p class="text-sm text-gray-300">
+                        Desenvolvimento de competências para avaliar criticamente os outputs de IA, garantindo precisão jurídica e conformidade ética - uma função de "guardiões humanos" do conhecimento jurídico.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+<div id="navigation" style="position: fixed; bottom: 10px; right: 10px; z-index: 1000; background-color: rgba(255, 255, 255, 0.8); padding: 5px; border-radius: 5px;"></div>
+<script>
+    (function() {
+        const totalSlides = 15;
+        const path = window.location.pathname;
+        const filename = path.substring(path.lastIndexOf('/') + 1);
+        const match = filename.match(/^(\d{3})_cenarios\.html$/);
+
+        if (!match) return;
+
+        const currentSlide = parseInt(match[1], 10);
+        const navContainer = document.getElementById('navigation');
+
+        if (!navContainer) return;
+
+        let prevHtml = '';
+        let nextHtml = '';
+
+        if (currentSlide > 0) {
+            const prevSlideNum = (currentSlide - 1).toString().padStart(3, '0');
+            prevHtml = `<a href="${prevSlideNum}_cenarios.html" style="text-decoration: none; margin-right: 10px;">< Anterior</a>`;
+        } else {
+            prevHtml = `<span style="color: grey; margin-right: 10px;">< Anterior</span>`;
+        }
+
+        if (currentSlide < totalSlides - 1) {
+            const nextSlideNum = (currentSlide + 1).toString().padStart(3, '0');
+            nextHtml = `<a href="${nextSlideNum}_cenarios.html" style="text-decoration: none;">Próximo ></a>`;
+        } else {
+            nextHtml = `<span style="color: grey;">Próximo ></span>`;
+        }
+
+        navContainer.innerHTML = prevHtml + nextHtml;
+    })();
+</script>
+</body>
+</html>

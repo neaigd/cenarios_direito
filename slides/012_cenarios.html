@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Considerações Finais</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(to right, #1a365d, #2d3748);
+            color: white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+        .slide-header {
+            padding: 2.5rem 3rem 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 10;
+        }
+        .slide-content {
+            flex: 1;
+            padding: 2rem 3rem;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            opacity: 0.05;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .considerations-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .consideration-card {
+            background-color: rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+        .consideration-card:hover {
+            transform: translateY(-5px);
+            background-color: rgba(255, 255, 255, 0.12);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .consideration-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+            font-size: 1.75rem;
+        }
+        .consideration-icon.preparation {
+            background-color: rgba(237, 137, 54, 0.2);
+            color: #ed8936;
+        }
+        .consideration-icon.adaptation {
+            background-color: rgba(72, 187, 120, 0.2);
+            color: #48bb78;
+        }
+        .consideration-icon.skills {
+            background-color: rgba(66, 153, 225, 0.2);
+            color: #4299e1;
+        }
+        .consideration-icon.ethics {
+            background-color: rgba(159, 122, 234, 0.2);
+            color: #9f7aea;
+        }
+        .consideration-icon.geopolitics {
+            background-color: rgba(237, 100, 166, 0.2);
+            color: #ed64a6;
+        }
+        .consideration-content {
+            flex: 1;
+        }
+        .final-box {
+            background-color: rgba(66, 153, 225, 0.15);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            text-align: center;
+            border: 1px solid rgba(66, 153, 225, 0.3);
+        }
+        .footer-note {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            padding: 1rem 0;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="pattern"></div>
+        <div class="slide-header">
+            <h1 class="text-3xl font-semibold tracking-wide">Considerações Finais</h1>
+            <div class="h-1 w-20 bg-blue-400 mt-2"></div>
+        </div>
+        <div class="slide-content">
+            <div class="considerations-container">
+                <div class="consideration-card">
+                    <div class="consideration-icon preparation">
+                        <i class="fas fa-hourglass-half"></i>
+                    </div>
+                    <div class="consideration-content">
+                        <h3 class="text-xl font-medium mb-1">Preparação é Crucial</h3>
+                        <p class="text-base text-gray-300">A velocidade do desenvolvimento da IA exige preparação ativa, não passividade. Instituições e profissionais jurídicos precisam se antecipar às mudanças.</p>
+                    </div>
+                </div>
+                
+                <div class="consideration-card">
+                    <div class="consideration-icon adaptation">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <div class="consideration-content">
+                        <h3 class="text-xl font-medium mb-1">Foco na Adaptação</h3>
+                        <p class="text-base text-gray-300">É essencial focar em como adaptar a prática e o ensino para incorporar e colaborar com a IA, em vez de apenas temer a substituição.</p>
+                    </div>
+                </div>
+                
+                <div class="consideration-card">
+                    <div class="consideration-icon skills">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="consideration-content">
+                        <h3 class="text-xl font-medium mb-1">Necessidade de Novas Habilidades</h3>
+                        <p class="text-base text-gray-300">As habilidades mais valorizadas no futuro serão a compreensão da tecnologia combinada com capacidades humanas como criatividade, empatia e pensamento crítico.</p>
+                    </div>
+                </div>
+                
+                <div class="consideration-card">
+                    <div class="consideration-icon ethics">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <div class="consideration-content">
+                        <h3 class="text-xl font-medium mb-1">Ética e Regulação</h3>
+                        <p class="text-base text-gray-300">As questões éticas, legais e regulatórias da IA são centrais e representam tanto riscos quanto novas áreas de especialização e ensino jurídico.</p>
+                    </div>
+                </div>
+                
+                <div class="consideration-card">
+                    <div class="consideration-icon geopolitics">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="consideration-content">
+                        <h3 class="text-xl font-medium mb-1">Contexto Geopolítico</h3>
+                        <p class="text-base text-gray-300">O cenário global de corrida por IA, concentração de poder e falta de regulamentação internacional influenciará profundamente o ambiente jurídico e deve ser considerado.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="final-box">
+                <p class="text-lg font-medium text-blue-100">
+                    <i class="fas fa-quote-left text-blue-400 mr-2 opacity-50"></i>
+                    Independentemente do cronograma exato para a AGI, o impacto da IA no direito, na pesquisa e no ensino jurídico é iminente e transformador.
+                    <i class="fas fa-quote-right text-blue-400 ml-2 opacity-50"></i>
+                </p>
+            </div>
+        </div>
+        
+        <div class="footer-note">
+            <p>Slide 12/15 - Cenários da IA no Direito e Ensino Jurídico</p>
+        </div>
+    </div>
+<div id="navigation" style="position: fixed; bottom: 10px; right: 10px; z-index: 1000; background-color: rgba(255, 255, 255, 0.8); padding: 5px; border-radius: 5px;"></div>
+<script>
+    (function() {
+        const totalSlides = 15;
+        const path = window.location.pathname;
+        const filename = path.substring(path.lastIndexOf('/') + 1);
+        const match = filename.match(/^(\d{3})_cenarios\.html$/);
+
+        if (!match) return;
+
+        const currentSlide = parseInt(match[1], 10);
+        const navContainer = document.getElementById('navigation');
+
+        if (!navContainer) return;
+
+        let prevHtml = '';
+        let nextHtml = '';
+
+        if (currentSlide > 0) {
+            const prevSlideNum = (currentSlide - 1).toString().padStart(3, '0');
+            prevHtml = `<a href="${prevSlideNum}_cenarios.html" style="text-decoration: none; margin-right: 10px;">< Anterior</a>`;
+        } else {
+            prevHtml = `<span style="color: grey; margin-right: 10px;">< Anterior</span>`;
+        }
+
+        if (currentSlide < totalSlides - 1) {
+            const nextSlideNum = (currentSlide + 1).toString().padStart(3, '0');
+            nextHtml = `<a href="${nextSlideNum}_cenarios.html" style="text-decoration: none;">Próximo ></a>`;
+        } else {
+            nextHtml = `<span style="color: grey;">Próximo ></span>`;
+        }
+
+        navContainer.innerHTML = prevHtml + nextHtml;
+    })();
+</script>
+</body>
+</html>

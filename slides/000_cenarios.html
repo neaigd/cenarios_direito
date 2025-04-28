@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cenários da IA no Direito e Ensino Jurídico</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+            color: white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            position: relative;
+        }
+        .slide-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 60px;
+            text-align: center;
+            z-index: 2;
+            position: relative;
+        }
+        .slide-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 30px 30px;
+            z-index: 1;
+        }
+        .slide-border {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1;
+        }
+        .subtitle {
+            max-width: 800px;
+        }
+        .icon-row {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 50px;
+        }
+        .icon-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="slide-pattern"></div>
+        <div class="slide-border"></div>
+        <div class="slide-content">
+            <h1 class="text-5xl font-bold mb-6 tracking-wide">CENÁRIOS DA IA NO DIREITO E ENSINO JURÍDICO</h1>
+            <div class="h-1 w-32 bg-blue-300 rounded mb-8"></div>
+            <p class="subtitle text-xl text-gray-300 mb-6">
+                Análise dos impactos da Inteligência Artificial na prática jurídica, pesquisa e ensino do Direito
+            </p>
+            <div class="icon-row">
+                <div class="icon-container">
+                    <i class="fas fa-balance-scale text-4xl text-blue-300"></i>
+                    <span class="text-sm text-gray-300">Prática Jurídica</span>
+                </div>
+                <div class="icon-container">
+                    <i class="fas fa-search text-4xl text-blue-300"></i>
+                    <span class="text-sm text-gray-300">Pesquisa</span>
+                </div>
+                <div class="icon-container">
+                    <i class="fas fa-graduation-cap text-4xl text-blue-300"></i>
+                    <span class="text-sm text-gray-300">Ensino</span>
+                </div>
+                <div class="icon-container">
+                    <i class="fas fa-globe text-4xl text-blue-300"></i>
+                    <span class="text-sm text-gray-300">Geopolítica</span>
+                </div>
+            </div>
+            <div class="absolute bottom-10 text-sm text-gray-400">
+                <p>Uma análise das tendências e cenários futuros</p>
+            </div>
+        </div>
+    </div>
+<div id="navigation" style="position: fixed; bottom: 10px; right: 10px; z-index: 1000; background-color: rgba(255, 255, 255, 0.8); padding: 5px; border-radius: 5px;"></div>
+<script>
+    (function() {
+        const totalSlides = 15;
+        const path = window.location.pathname;
+        const filename = path.substring(path.lastIndexOf('/') + 1);
+        const match = filename.match(/^(\d{3})_cenarios\.html$/);
+
+        if (!match) return;
+
+        const currentSlide = parseInt(match[1], 10);
+        const navContainer = document.getElementById('navigation');
+
+        if (!navContainer) return;
+
+        let prevHtml = '';
+        let nextHtml = '';
+
+        if (currentSlide > 0) {
+            const prevSlideNum = (currentSlide - 1).toString().padStart(3, '0');
+            prevHtml = `<a href="${prevSlideNum}_cenarios.html" style="text-decoration: none; margin-right: 10px;">< Anterior</a>`;
+        } else {
+            prevHtml = `<span style="color: grey; margin-right: 10px;">< Anterior</span>`;
+        }
+
+        if (currentSlide < totalSlides - 1) {
+            const nextSlideNum = (currentSlide + 1).toString().padStart(3, '0');
+            nextHtml = `<a href="${nextSlideNum}_cenarios.html" style="text-decoration: none;">Próximo ></a>`;
+        } else {
+            nextHtml = `<span style="color: grey;">Próximo ></span>`;
+        }
+
+        navContainer.innerHTML = prevHtml + nextHtml;
+    })();
+</script>
+</body>
+</html>

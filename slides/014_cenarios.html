@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perguntas para Reflexão</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(to right, #1a365d, #2d3748);
+            color: white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+        .slide-header {
+            padding: 2.5rem 3rem 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 10;
+        }
+        .slide-content {
+            flex: 1;
+            padding: 2rem 3rem;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            opacity: 0.05;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .questions-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.75rem;
+        }
+        .question-card {
+            background-color: rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: flex-start;
+            border-left: 4px solid transparent;
+        }
+        .question-card:hover {
+            transform: translateY(-5px);
+            background-color: rgba(255, 255, 255, 0.12);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .question-card.strategic {
+            border-left-color: #4299e1;
+        }
+        .question-card.ethical {
+            border-left-color: #9f7aea;
+        }
+        .question-card.educational {
+            border-left-color: #48bb78;
+        }
+        .question-card.regulatory {
+            border-left-color: #ed8936;
+        }
+        .question-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+            font-size: 1.5rem;
+        }
+        .question-icon.strategic {
+            background-color: rgba(66, 153, 225, 0.2);
+            color: #4299e1;
+        }
+        .question-icon.ethical {
+            background-color: rgba(159, 122, 234, 0.2);
+            color: #9f7aea;
+        }
+        .question-icon.educational {
+            background-color: rgba(72, 187, 120, 0.2);
+            color: #48bb78;
+        }
+        .question-icon.regulatory {
+            background-color: rgba(237, 137, 54, 0.2);
+            color: #ed8936;
+        }
+        .question-content {
+            flex: 1;
+        }
+        .subquestions {
+            margin-top: 0.75rem;
+            padding-left: 1.5rem;
+        }
+        .subquestion {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        .subquestion-indicator {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            margin-right: 0.75rem;
+            flex-shrink: 0;
+        }
+        .subquestion-indicator.strategic {
+            background-color: #4299e1;
+        }
+        .subquestion-indicator.ethical {
+            background-color: #9f7aea;
+        }
+        .subquestion-indicator.educational {
+            background-color: #48bb78;
+        }
+        .subquestion-indicator.regulatory {
+            background-color: #ed8936;
+        }
+        .footer-note {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            padding: 1rem 0;
+            font-size: 0.8rem;
+        }
+        .final-thoughts {
+            background-color: rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="pattern"></div>
+        <div class="slide-header">
+            <h1 class="text-3xl font-semibold tracking-wide">Perguntas para Reflexão</h1>
+            <div class="h-1 w-20 bg-blue-400 mt-2"></div>
+        </div>
+        <div class="slide-content">
+            <div class="questions-container">
+                <div class="question-card strategic">
+                    <div class="question-icon strategic">
+                        <i class="fas fa-chess"></i>
+                    </div>
+                    <div class="question-content">
+                        <h3 class="text-xl font-medium mb-1">Questões Estratégicas</h3>
+                        <p class="text-base text-gray-300">Como sua organização jurídica está se preparando para um futuro com IA avançada?</p>
+                        <div class="subquestions">
+                            <div class="subquestion">
+                                <div class="subquestion-indicator strategic"></div>
+                                <p class="text-sm text-gray-400">Quais são os investimentos necessários em tecnologia e capacitação?</p>
+                            </div>
+                            <div class="subquestion">
+                                <div class="subquestion-indicator strategic"></div>
+                                <p class="text-sm text-gray-400">Como equilibrar automação e expertise humana nos processos jurídicos?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-card ethical">
+                    <div class="question-icon ethical">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <div class="question-content">
+                        <h3 class="text-xl font-medium mb-1">Questões Éticas</h3>
+                        <p class="text-base text-gray-300">Quais padrões éticos devem guiar o uso da IA no direito?</p>
+                        <div class="subquestions">
+                            <div class="subquestion">
+                                <div class="subquestion-indicator ethical"></div>
+                                <p class="text-sm text-gray-400">Como garantir transparência e explicabilidade em sistemas de IA para decisões jurídicas?</p>
+                            </div>
+                            <div class="subquestion">
+                                <div class="subquestion-indicator ethical"></div>
+                                <p class="text-sm text-gray-400">Quais limites devem ser impostos à automação de processos jurídicos?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-card educational">
+                    <div class="question-icon educational">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="question-content">
+                        <h3 class="text-xl font-medium mb-1">Questões Educacionais</h3>
+                        <p class="text-base text-gray-300">Como deve evoluir o ensino jurídico para preparar a próxima geração?</p>
+                        <div class="subquestions">
+                            <div class="subquestion">
+                                <div class="subquestion-indicator educational"></div>
+                                <p class="text-sm text-gray-400">Quais habilidades tornarão os profissionais jurídicos à prova de automação?</p>
+                            </div>
+                            <div class="subquestion">
+                                <div class="subquestion-indicator educational"></div>
+                                <p class="text-sm text-gray-400">Como integrar tecnologia e IA no próprio processo de aprendizado jurídico?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-card regulatory">
+                    <div class="question-icon regulatory">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <div class="question-content">
+                        <h3 class="text-xl font-medium mb-1">Questões Regulatórias</h3>
+                        <p class="text-base text-gray-300">Qual o papel do Brasil no cenário global de regulação da IA?</p>
+                        <div class="subquestions">
+                            <div class="subquestion">
+                                <div class="subquestion-indicator regulatory"></div>
+                                <p class="text-sm text-gray-400">Como desenvolver regulações nacionais em sintonia com tendências globais?</p>
+                            </div>
+                            <div class="subquestion">
+                                <div class="subquestion-indicator regulatory"></div>
+                                <p class="text-sm text-gray-400">Quais setores jurídicos prioritários precisam de regulamentação específica para IA?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="final-thoughts">
+                <p class="text-lg text-blue-200">
+                    Estas questões devem guiar nossa discussão sobre como integrar a IA de forma responsável e estratégica no contexto jurídico brasileiro, considerando tanto cenários de curto quanto de longo prazo.
+                </p>
+            </div>
+        </div>
+        
+        <div class="footer-note">
+            <p>Slide 14/15 - Cenários da IA no Direito e Ensino Jurídico</p>
+        </div>
+    </div>
+<div id="navigation" style="position: fixed; bottom: 10px; right: 10px; z-index: 1000; background-color: rgba(255, 255, 255, 0.8); padding: 5px; border-radius: 5px;"></div>
+<script>
+    (function() {
+        const totalSlides = 15;
+        const path = window.location.pathname;
+        const filename = path.substring(path.lastIndexOf('/') + 1);
+        const match = filename.match(/^(\d{3})_cenarios\.html$/);
+
+        if (!match) return;
+
+        const currentSlide = parseInt(match[1], 10);
+        const navContainer = document.getElementById('navigation');
+
+        if (!navContainer) return;
+
+        let prevHtml = '';
+        let nextHtml = '';
+
+        if (currentSlide > 0) {
+            const prevSlideNum = (currentSlide - 1).toString().padStart(3, '0');
+            prevHtml = `<a href="${prevSlideNum}_cenarios.html" style="text-decoration: none; margin-right: 10px;">< Anterior</a>`;
+        } else {
+            prevHtml = `<span style="color: grey; margin-right: 10px;">< Anterior</span>`;
+        }
+
+        if (currentSlide < totalSlides - 1) {
+            const nextSlideNum = (currentSlide + 1).toString().padStart(3, '0');
+            nextHtml = `<a href="${nextSlideNum}_cenarios.html" style="text-decoration: none;">Próximo ></a>`;
+        } else {
+            nextHtml = `<span style="color: grey;">Próximo ></span>`;
+        }
+
+        navContainer.innerHTML = prevHtml + nextHtml;
+    })();
+</script>
+</body>
+</html>

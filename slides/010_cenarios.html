@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questões Geopolíticas da IA no Direito</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(to right, #1a365d, #2d3748);
+            color: white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+        .slide-header {
+            padding: 2.5rem 3rem 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 10;
+        }
+        .slide-content {
+            flex: 1;
+            padding: 2rem 3rem;
+            z-index: 10;
+            display: flex;
+            gap: 2rem;
+        }
+        .pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            opacity: 0.05;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .geopolitical-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.25rem;
+            width: 100%;
+        }
+        .geopolitical-card {
+            background-color: rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            padding: 1.25rem;
+            transition: all 0.3s ease;
+            display: flex;
+            border-left: 4px solid transparent;
+        }
+        .geopolitical-card.warning {
+            border-left-color: #ed8936;
+        }
+        .geopolitical-card.challenge {
+            border-left-color: #e53e3e;
+        }
+        .geopolitical-card.opportunity {
+            border-left-color: #4299e1;
+        }
+        .geopolitical-card.risk {
+            border-left-color: #9f7aea;
+        }
+        .geopolitical-card:hover {
+            transform: translateY(-5px);
+            background-color: rgba(255, 255, 255, 0.12);
+        }
+        .geo-icon {
+            font-size: 1.75rem;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        .geo-content {
+            flex: 1;
+        }
+        .quote-box {
+            background-color: rgba(66, 153, 225, 0.15);
+            border-left: 4px solid #4299e1;
+            padding: 1.5rem;
+            border-radius: 0 4px 4px 0;
+            margin-top: 1.5rem;
+            grid-column: span 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="pattern"></div>
+        <div class="slide-header">
+            <h1 class="text-3xl font-semibold tracking-wide">Questões Geopolíticas da IA</h1>
+            <p class="text-gray-400 mt-1">Aspectos comuns a ambos os cenários</p>
+            <div class="h-1 w-20 bg-blue-400 mt-2"></div>
+        </div>
+        <div class="slide-content">
+            <div class="geopolitical-grid">
+                <div class="geopolitical-card warning">
+                    <div class="geo-icon">
+                        <i class="fas fa-running text-yellow-400"></i>
+                    </div>
+                    <div class="geo-content">
+                        <h3 class="text-lg font-medium mb-1">Corrida Global por IA</h3>
+                        <p class="text-sm text-gray-300">Corrida acelerada entre países e grandes corporações pelo desenvolvimento e domínio da IA, direcionando enorme capacidade computacional para a área.</p>
+                    </div>
+                </div>
+                
+                <div class="geopolitical-card risk">
+                    <div class="geo-icon">
+                        <i class="fas fa-balance-scale text-purple-400"></i>
+                    </div>
+                    <div class="geo-content">
+                        <h3 class="text-lg font-medium mb-1">Concentração de Poder</h3>
+                        <p class="text-sm text-gray-300">Risco de que o desenvolvimento da IA seja dominado por poucas corporações e governos, exacerbando desigualdades e limitando diversidade nas aplicações.</p>
+                    </div>
+                </div>
+                
+                <div class="geopolitical-card challenge">
+                    <div class="geo-icon">
+                        <i class="fas fa-fighter-jet text-red-400"></i>
+                    </div>
+                    <div class="geo-content">
+                        <h3 class="text-lg font-medium mb-1">Corrida Armamentista de IA</h3>
+                        <p class="text-sm text-gray-300">Preocupações com o desenvolvimento rápido de tecnologias de IA com potencial militar ou prejudicial, como armas autônomas.</p>
+                    </div>
+                </div>
+                
+                <div class="geopolitical-card warning">
+                    <div class="geo-icon">
+                        <i class="fas fa-university text-yellow-400"></i>
+                    </div>
+                    <div class="geo-content">
+                        <h3 class="text-lg font-medium mb-1">Ameaça às Democracias</h3>
+                        <p class="text-sm text-gray-300">IA usada para desinformação e manipulação pública (deepfakes, vídeos falsos), ameaçando democracias. Regimes autoritários podem usar IA para vigilância e controle mais eficaz.</p>
+                    </div>
+                </div>
+                
+                <div class="geopolitical-card risk">
+                    <div class="geo-icon">
+                        <i class="fas fa-gavel text-purple-400"></i>
+                    </div>
+                    <div class="geo-content">
+                        <h3 class="text-lg font-medium mb-1">Falta de Regulação Global</h3>
+                        <p class="text-sm text-gray-300">Apesar dos riscos significativos, há falta de regulamentação adequada e coordenada globalmente. Empresas de IA estão lobbiando ativamente contra a regulamentação.</p>
+                    </div>
+                </div>
+                
+                <div class="geopolitical-card challenge">
+                    <div class="geo-icon">
+                        <i class="fas fa-globe-americas text-red-400"></i>
+                    </div>
+                    <div class="geo-content">
+                        <h3 class="text-lg font-medium mb-1">Impacto Desigual em Países em Desenvolvimento</h3>
+                        <p class="text-sm text-gray-300">IA chega em ritmo irregular globalmente. Países em desenvolvimento, incluindo o Brasil, estão atrás em adoção devido a problemas institucionais e setores informais grandes.</p>
+                    </div>
+                </div>
+                
+                <div class="geopolitical-card warning">
+                    <div class="geo-icon">
+                        <i class="fas fa-shield-alt text-yellow-400"></i>
+                    </div>
+                    <div class="geo-content">
+                        <h3 class="text-lg font-medium mb-1">Preocupações de Segurança</h3>
+                        <p class="text-sm text-gray-300">Uso indevido da IA por hackers para desenvolver ataques cibernéticos avançados, incluindo possíveis ataques a instituições financeiras e infraestruturas críticas.</p>
+                    </div>
+                </div>
+                
+                <div class="geopolitical-card opportunity">
+                    <div class="geo-icon">
+                        <i class="fas fa-handshake text-blue-400"></i>
+                    </div>
+                    <div class="geo-content">
+                        <h3 class="text-lg font-medium mb-1">Necessidade de Cooperação Internacional</h3>
+                        <p class="text-sm text-gray-300">Tentativas de regulação unilateral são difíceis sem colaboração internacional. Necessidade urgente de estruturas legais e regulatórias globais para endereçar responsabilidade e propriedade intelectual.</p>
+                    </div>
+                </div>
+                
+                <div class="quote-box">
+                    <div class="flex items-start">
+                        <i class="fas fa-quote-left text-blue-400 text-2xl mt-1 mr-4 opacity-50"></i>
+                        <div>
+                            <p class="text-base text-gray-300 mb-2">
+                                "A IA é a primeira tecnologia que toma decisões por si só e sobre humanos, sendo assustador que ferramentas tão poderosas sejam lançadas sem medidas de segurança ou regulamentação comparáveis à indústria farmacêutica."
+                            </p>
+                            <p class="text-sm text-blue-300 italic">- Yuval Noah Harari</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div id="navigation" style="position: fixed; bottom: 10px; right: 10px; z-index: 1000; background-color: rgba(255, 255, 255, 0.8); padding: 5px; border-radius: 5px;"></div>
+<script>
+    (function() {
+        const totalSlides = 15;
+        const path = window.location.pathname;
+        const filename = path.substring(path.lastIndexOf('/') + 1);
+        const match = filename.match(/^(\d{3})_cenarios\.html$/);
+
+        if (!match) return;
+
+        const currentSlide = parseInt(match[1], 10);
+        const navContainer = document.getElementById('navigation');
+
+        if (!navContainer) return;
+
+        let prevHtml = '';
+        let nextHtml = '';
+
+        if (currentSlide > 0) {
+            const prevSlideNum = (currentSlide - 1).toString().padStart(3, '0');
+            prevHtml = `<a href="${prevSlideNum}_cenarios.html" style="text-decoration: none; margin-right: 10px;">< Anterior</a>`;
+        } else {
+            prevHtml = `<span style="color: grey; margin-right: 10px;">< Anterior</span>`;
+        }
+
+        if (currentSlide < totalSlides - 1) {
+            const nextSlideNum = (currentSlide + 1).toString().padStart(3, '0');
+            nextHtml = `<a href="${nextSlideNum}_cenarios.html" style="text-decoration: none;">Próximo ></a>`;
+        } else {
+            nextHtml = `<span style="color: grey;">Próximo ></span>`;
+        }
+
+        navContainer.innerHTML = prevHtml + nextHtml;
+    })();
+</script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implicações para Ensino e Negócios (Direito e IA)</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(to right, #1a365d, #2d3748);
+            color: white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+        .slide-header {
+            padding: 2.5rem 3rem 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 10;
+        }
+        .slide-content {
+            flex: 1;
+            padding: 2rem 3rem;
+            z-index: 10;
+            display: flex;
+            gap: 3rem;
+        }
+        .pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            opacity: 0.05;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .opportunity-column {
+            flex: 1;
+        }
+        .opportunity-card {
+            background-color: rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            padding: 1.25rem;
+            margin-bottom: 1.25rem;
+            transition: all 0.3s ease;
+            display: flex;
+            border-left: 4px solid transparent;
+        }
+        .opportunity-card.education {
+            border-left-color: #4299e1;
+        }
+        .opportunity-card.business {
+            border-left-color: #38a169;
+        }
+        .opportunity-card:hover {
+            transform: translateY(-5px);
+            background-color: rgba(255, 255, 255, 0.12);
+        }
+        .opportunity-icon {
+            font-size: 1.75rem;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        .opportunity-content {
+            flex: 1;
+        }
+        .highlight-box {
+            background-color: rgba(66, 153, 225, 0.15);
+            border-left: 4px solid #4299e1;
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin-top: 1rem;
+        }
+        .footer-note {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            padding: 1rem 0;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="pattern"></div>
+        <div class="slide-header">
+            <h1 class="text-3xl font-semibold tracking-wide">Implicações para Ensino e Negócios</h1>
+            <p class="text-gray-400 mt-1">Oportunidades emergentes em Direito e IA</p>
+            <div class="h-1 w-20 bg-blue-400 mt-2"></div>
+        </div>
+        <div class="slide-content">
+            <div class="opportunity-column">
+                <h2 class="text-xl font-medium mb-4 text-blue-300">
+                    <i class="fas fa-graduation-cap mr-2"></i>Oportunidades de Ensino
+                </h2>
+                
+                <div class="opportunity-card education">
+                    <div class="opportunity-icon">
+                        <i class="fas fa-user-graduate text-blue-400"></i>
+                    </div>
+                    <div class="opportunity-content">
+                        <h3 class="text-base font-medium mb-1">Necessidade de Educação Sobre IA</h3>
+                        <p class="text-sm text-gray-300">Educação urgente de profissionais jurídicos (advogados, juízes, promotores) sobre capacidades e limitações da IA.</p>
+                    </div>
+                </div>
+                
+                <div class="opportunity-card education">
+                    <div class="opportunity-icon">
+                        <i class="fas fa-tools text-blue-400"></i>
+                    </div>
+                    <div class="opportunity-content">
+                        <h3 class="text-base font-medium mb-1">Programas de Uso Prático</h3>
+                        <p class="text-sm text-gray-300">Desenvolvimento de programas focados em como usar ferramentas de IA na prática jurídica diária (pesquisa, análise, redação).</p>
+                    </div>
+                </div>
+                
+                <div class="opportunity-card education">
+                    <div class="opportunity-icon">
+                        <i class="fas fa-balance-scale text-blue-400"></i>
+                    </div>
+                    <div class="opportunity-content">
+                        <h3 class="text-base font-medium mb-1">Especializações em Direito da IA</h3>
+                        <p class="text-sm text-gray-300">Cursos abordando ética, privacidade, responsabilidade, propriedade intelectual, vieses e regulação da IA.</p>
+                    </div>
+                </div>
+                
+                <div class="opportunity-card education">
+                    <div class="opportunity-icon">
+                        <i class="fas fa-brain text-blue-400"></i>
+                    </div>
+                    <div class="opportunity-content">
+                        <h3 class="text-base font-medium mb-1">Desenvolvimento de Habilidades Humanas</h3>
+                        <p class="text-sm text-gray-300">Ensino focado em habilidades que complementem a IA (pensamento crítico, criatividade, empatia, negociação, estratégia).</p>
+                    </div>
+                </div>
+                
+                <div class="opportunity-card education">
+                    <div class="opportunity-icon">
+                        <i class="fas fa-robot text-blue-400"></i>
+                    </div>
+                    <div class="opportunity-content">
+                        <h3 class="text-base font-medium mb-1">IA como Ferramenta Pedagógica</h3>
+                        <p class="text-sm text-gray-300">Exploração do uso de IA como ferramenta de ensino no direito (tutores de IA, simuladores de casos).</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="opportunity-column">
+                <h2 class="text-xl font-medium mb-4 text-green-300">
+                    <i class="fas fa-chart-line mr-2"></i>Oportunidades de Negócios
+                </h2>
+                
+                <div class="opportunity-card business">
+                    <div class="opportunity-icon">
+                        <i class="fas fa-briefcase text-green-400"></i>
+                    </div>
+                    <div class="opportunity-content">
+                        <h3 class="text-base font-medium mb-1">Consultoria em Implementação</h3>
+                        <p class="text-sm text-gray-300">Consultoria para escritórios de advocacia e departamentos jurídicos sobre implementação e uso estratégico de ferramentas de IA.</p>
+                    </div>
+                </div>
+                
+                <div class="opportunity-card business">
+                    <div class="opportunity-icon">
+                        <i class="fas fa-cogs text-green-400"></i>
+                    </div>
+                    <div class="opportunity-content">
+                        <h3 class="text-base font-medium mb-1">Ferramentas Especializadas</h3>
+                        <p class="text-sm text-gray-300">Desenvolvimento de ferramentas de IA jurídica (e-discovery, análise de contratos, compliance, gestão de casos, análise preditiva).</p>
+                    </div>
+                </div>
+                
+                <div class="opportunity-card business">
+                    <div class="opportunity-icon">
+                        <i class="fas fa-shield-alt text-green-400"></i>
+                    </div>
+                    <div class="opportunity-content">
+                        <h3 class="text-base font-medium mb-1">Compliance e Auditoria</h3>
+                        <p class="text-sm text-gray-300">Serviços para garantir conformidade com regulamentações e mitigar riscos (viés, privacidade, segurança) em sistemas de IA.</p>
+                    </div>
+                </div>
+                
+                <div class="opportunity-card business">
+                    <div class="opportunity-icon">
+                        <i class="fas fa-file-contract text-green-400"></i>
+                    </div>
+                    <div class="opportunity-content">
+                        <h3 class="text-base font-medium mb-1">Modelos Híbridos</h3>
+                        <p class="text-sm text-gray-300">Modelos de negócios que combinem expertises jurídicas humanas com capacidades de IA (escritórios "híbridos").</p>
+                    </div>
+                </div>
+                
+                <div class="opportunity-card business">
+                    <div class="opportunity-icon">
+                        <i class="fas fa-globe text-green-400"></i>
+                    </div>
+                    <div class="opportunity-content">
+                        <h3 class="text-base font-medium mb-1">Assessoria Regulatória</h3>
+                        <p class="text-sm text-gray-300">Foco nos desafios regulatórios e geopolíticos, assessorando governos, empresas e organizações internacionais.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="highlight-box mx-12 mb-5">
+            <div class="flex items-start">
+                <i class="fas fa-lightbulb text-yellow-400 text-2xl mt-1 mr-4"></i>
+                <p class="text-base">
+                    <span class="font-medium">Ambos os cenários</span> (curto e longo prazo) apontam para uma transformação inevitável no campo jurídico. Independentemente do cronograma exato da AGI, profissionais e instituições que se anteciparem a essas mudanças terão vantagem competitiva significativa.
+                </p>
+            </div>
+        </div>
+        
+        <div class="footer-note">
+            <p>Slide 11/15 - Cenários da IA no Direito e Ensino Jurídico</p>
+        </div>
+    </div>
+<div id="navigation" style="position: fixed; bottom: 10px; right: 10px; z-index: 1000; background-color: rgba(255, 255, 255, 0.8); padding: 5px; border-radius: 5px;"></div>
+<script>
+    (function() {
+        const totalSlides = 15;
+        const path = window.location.pathname;
+        const filename = path.substring(path.lastIndexOf('/') + 1);
+        const match = filename.match(/^(\d{3})_cenarios\.html$/);
+
+        if (!match) return;
+
+        const currentSlide = parseInt(match[1], 10);
+        const navContainer = document.getElementById('navigation');
+
+        if (!navContainer) return;
+
+        let prevHtml = '';
+        let nextHtml = '';
+
+        if (currentSlide > 0) {
+            const prevSlideNum = (currentSlide - 1).toString().padStart(3, '0');
+            prevHtml = `<a href="${prevSlideNum}_cenarios.html" style="text-decoration: none; margin-right: 10px;">< Anterior</a>`;
+        } else {
+            prevHtml = `<span style="color: grey; margin-right: 10px;">< Anterior</span>`;
+        }
+
+        if (currentSlide < totalSlides - 1) {
+            const nextSlideNum = (currentSlide + 1).toString().padStart(3, '0');
+            nextHtml = `<a href="${nextSlideNum}_cenarios.html" style="text-decoration: none;">Próximo ></a>`;
+        } else {
+            nextHtml = `<span style="color: grey;">Próximo ></span>`;
+        }
+
+        navContainer.innerHTML = prevHtml + nextHtml;
+    })();
+</script>
+</body>
+</html>

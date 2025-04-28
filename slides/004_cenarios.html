@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impactos na Prática Jurídica (Cenário de Curto Prazo)</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(to right, #1a365d, #2d3748);
+            color: white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+        .slide-header {
+            padding: 2.5rem 3rem 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 10;
+        }
+        .slide-content {
+            flex: 1;
+            padding: 2rem 3rem;
+            z-index: 10;
+            display: flex;
+        }
+        .pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            opacity: 0.05;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            width: 100%;
+        }
+        .impact-card {
+            background-color: rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            display: flex;
+            border-left: 4px solid transparent;
+        }
+        .impact-card.warning {
+            border-left-color: #ed8936;
+        }
+        .impact-card.opportunity {
+            border-left-color: #4299e1;
+        }
+        .impact-card.transformation {
+            border-left-color: #9f7aea;
+        }
+        .impact-card:hover {
+            transform: translateY(-5px);
+            background-color: rgba(255, 255, 255, 0.12);
+        }
+        .impact-icon {
+            font-size: 2rem;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        .impact-content {
+            flex: 1;
+        }
+        .highlight-box {
+            background-color: rgba(66, 153, 225, 0.15);
+            border-left: 4px solid #4299e1;
+            padding: 1.5rem;
+            border-radius: 0 4px 4px 0;
+            margin-top: 2rem;
+            grid-column: span 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="pattern"></div>
+        <div class="slide-header">
+            <h1 class="text-3xl font-semibold tracking-wide">Impactos na Prática Jurídica</h1>
+            <p class="text-gray-400 mt-1">Cenário 1: AGI em Curto Prazo (2-5 Anos)</p>
+            <div class="h-1 w-20 bg-blue-400 mt-2"></div>
+        </div>
+        <div class="slide-content">
+            <div class="impact-grid">
+                <div class="impact-card warning">
+                    <div class="impact-icon">
+                        <i class="fas fa-exclamation-triangle text-yellow-400"></i>
+                    </div>
+                    <div class="impact-content">
+                        <h3 class="text-lg font-medium mb-2">Automação de Tarefas Rotineiras</h3>
+                        <p class="text-sm text-gray-300">Tarefas de paralegais e profissionais de suporte estariam altamente suscetíveis à obsolescência. Funções repetitivas seriam as primeiras a serem automatizadas.</p>
+                    </div>
+                </div>
+                
+                <div class="impact-card warning">
+                    <div class="impact-icon">
+                        <i class="fas fa-user-graduate text-yellow-400"></i>
+                    </div>
+                    <div class="impact-content">
+                        <h3 class="text-lg font-medium mb-2">Obsolescência de Especialistas</h3>
+                        <p class="text-sm text-gray-300">Trabalhos complexos que exigem anos de especialização humana poderiam ser automatizados. Advogados que realizam análises baseadas em dados complexos seriam os mais afetados.</p>
+                    </div>
+                </div>
+                
+                <div class="impact-card transformation">
+                    <div class="impact-icon">
+                        <i class="fas fa-chart-line text-purple-400"></i>
+                    </div>
+                    <div class="impact-content">
+                        <h3 class="text-lg font-medium mb-2">Eficiência e Produtividade</h3>
+                        <p class="text-sm text-gray-300">A AGI geraria uma onda de eficiência sem precedentes, redesenhando o mercado de trabalho jurídico e mudando fundamentalmente as expectativas de velocidade e precisão.</p>
+                    </div>
+                </div>
+                
+                <div class="impact-card opportunity">
+                    <div class="impact-icon">
+                        <i class="fas fa-lightbulb text-blue-400"></i>
+                    </div>
+                    <div class="impact-content">
+                        <h3 class="text-lg font-medium mb-2">Novas Oportunidades</h3>
+                        <p class="text-sm text-gray-300">Surgiriam oportunidades para profissionais que saibam liderar iniciativas de IA, combinando compreensão estratégica da tecnologia com habilidades humanas como criatividade e inteligência emocional.</p>
+                    </div>
+                </div>
+                
+                <div class="impact-card transformation">
+                    <div class="impact-icon">
+                        <i class="fas fa-robot text-purple-400"></i>
+                    </div>
+                    <div class="impact-content">
+                        <h3 class="text-lg font-medium mb-2">Sistemas Jurídicos Autônomos</h3>
+                        <p class="text-sm text-gray-300">Sistemas autônomos poderiam lidar com análise de documentos, pesquisa de jurisprudência e elaboração de petições básicas com velocidade e precisão superiores.</p>
+                    </div>
+                </div>
+                
+                <div class="impact-card opportunity">
+                    <div class="impact-icon">
+                        <i class="fas fa-balance-scale text-blue-400"></i>
+                    </div>
+                    <div class="impact-content">
+                        <h3 class="text-lg font-medium mb-2">Questões Regulatórias</h3>
+                        <p class="text-sm text-gray-300">Emergência de entidades controladas por IA operando no mundo jurídico levantaria novas questões de responsabilidade e regulamentação, criando novas áreas de especialização.</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <p class="text-base font-medium flex items-center">
+                        <i class="fas fa-info-circle text-blue-400 mr-3 text-xl"></i>
+                        A transformação seria rápida e profunda, exigindo adaptação urgente dos profissionais jurídicos. O foco mudaria das habilidades técnicas tradicionais para capacidades estratégicas de utilização da IA e habilidades exclusivamente humanas como empatia, negociação complexa e pensamento ético.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+<div id="navigation" style="position: fixed; bottom: 10px; right: 10px; z-index: 1000; background-color: rgba(255, 255, 255, 0.8); padding: 5px; border-radius: 5px;"></div>
+<script>
+    (function() {
+        const totalSlides = 15;
+        const path = window.location.pathname;
+        const filename = path.substring(path.lastIndexOf('/') + 1);
+        const match = filename.match(/^(\d{3})_cenarios\.html$/);
+
+        if (!match) return;
+
+        const currentSlide = parseInt(match[1], 10);
+        const navContainer = document.getElementById('navigation');
+
+        if (!navContainer) return;
+
+        let prevHtml = '';
+        let nextHtml = '';
+
+        if (currentSlide > 0) {
+            const prevSlideNum = (currentSlide - 1).toString().padStart(3, '0');
+            prevHtml = `<a href="${prevSlideNum}_cenarios.html" style="text-decoration: none; margin-right: 10px;">< Anterior</a>`;
+        } else {
+            prevHtml = `<span style="color: grey; margin-right: 10px;">< Anterior</span>`;
+        }
+
+        if (currentSlide < totalSlides - 1) {
+            const nextSlideNum = (currentSlide + 1).toString().padStart(3, '0');
+            nextHtml = `<a href="${nextSlideNum}_cenarios.html" style="text-decoration: none;">Próximo ></a>`;
+        } else {
+            nextHtml = `<span style="color: grey;">Próximo ></span>`;
+        }
+
+        navContainer.innerHTML = prevHtml + nextHtml;
+    })();
+</script>
+</body>
+</html>

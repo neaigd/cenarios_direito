@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impactos na Prática Jurídica (Cenário de Longo Prazo)</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(to right, #1a365d, #2d3748);
+            color: white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+        .slide-header {
+            padding: 2.5rem 3rem 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 10;
+        }
+        .slide-content {
+            flex: 1;
+            padding: 2rem 3rem;
+            z-index: 10;
+            display: flex;
+        }
+        .pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            opacity: 0.05;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .content-columns {
+            display: flex;
+            width: 100%;
+            gap: 3rem;
+        }
+        .left-column {
+            flex: 1;
+        }
+        .right-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .impact-card {
+            background-color: rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #9f7aea;
+            transition: all 0.3s ease;
+        }
+        .impact-card:hover {
+            transform: translateX(5px);
+            background-color: rgba(255, 255, 255, 0.12);
+        }
+        .compare-container {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 2rem;
+            height: calc(100% - 6rem);
+        }
+        .compare-row {
+            display: flex;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        .compare-row:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            bottom: -0.75rem;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .compare-label {
+            flex: 1;
+            font-weight: 500;
+            padding-right: 1rem;
+            color: #a78bda;
+        }
+        .compare-content {
+            flex: 2;
+        }
+        .integration-diagram {
+            background-color: rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .diagram-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            width: 100%;
+        }
+        .diagram-item {
+            background-color: rgba(159, 122, 234, 0.2);
+            border: 1px solid rgba(159, 122, 234, 0.4);
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            margin: 0 0.5rem;
+            text-align: center;
+            width: 120px;
+        }
+        .diagram-arrow {
+            color: rgba(159, 122, 234, 0.7);
+            margin: 0 0.5rem;
+        }
+        .highlight-box {
+            background-color: rgba(159, 122, 234, 0.15);
+            border-left: 4px solid #9f7aea;
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin-top: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="pattern"></div>
+        <div class="slide-header">
+            <h1 class="text-3xl font-semibold tracking-wide">Impactos na Prática Jurídica</h1>
+            <p class="text-gray-400 mt-1">Cenário 2: AGI em Longo Prazo (Mais de 5-10 Anos)</p>
+            <div class="h-1 w-20 bg-purple-400 mt-2"></div>
+        </div>
+        <div class="slide-content">
+            <div class="content-columns">
+                <div class="left-column">
+                    <h2 class="text-xl font-medium mb-4 text-purple-300">Transformação Gradual da Advocacia</h2>
+                    
+                    <div class="impact-card">
+                        <h3 class="text-lg font-medium mb-2">
+                            <i class="fas fa-robot text-purple-400 mr-2"></i>
+                            Automação Setorial
+                        </h3>
+                        <p class="text-sm text-gray-300">
+                            A automação seria mais gradual e focada em setores específicos. Ferramentas de IA se tornariam assistentes poderosos para advogados e paralegais, aumentando a eficiência em tarefas específicas.
+                        </p>
+                    </div>
+                    
+                    <div class="impact-card">
+                        <h3 class="text-lg font-medium mb-2">
+                            <i class="fas fa-user-tie text-purple-400 mr-2"></i>
+                            Substituição Seletiva
+                        </h3>
+                        <p class="text-sm text-gray-300">
+                            A substituição de empregos ocorreria de forma mais focada em tarefas repetitivas e de baixo valor agregado. Paralegais continuariam sendo uma profissão sob alta pressão de automação.
+                        </p>
+                    </div>
+                    
+                    <div class="impact-card">
+                        <h3 class="text-lg font-medium mb-2">
+                            <i class="fas fa-eye text-purple-400 mr-2"></i>
+                            Supervisão Humana
+                        </h3>
+                        <p class="text-sm text-gray-300">
+                            A necessidade de supervisão humana para corrigir erros da IA seria persistente. A revisão humana continuaria sendo essencial para garantir a qualidade do trabalho jurídico.
+                        </p>
+                    </div>
+                    
+                    <div class="impact-card">
+                        <h3 class="text-lg font-medium mb-2">
+                            <i class="fas fa-chess text-purple-400 mr-2"></i>
+                            Vantagem Estratégica
+                        </h3>
+                        <p class="text-sm text-gray-300">
+                            Profissionais que dominassem o uso estratégico dessas ferramentas de IA teriam uma vantagem competitiva significativa no mercado jurídico cada vez mais tecnológico.
+                        </p>
+                    </div>
+                    
+                    <div class="highlight-box">
+                        <p class="text-base flex items-center">
+                            <i class="fas fa-lightbulb text-yellow-400 mr-3 text-xl"></i>
+                            <span>O desafio seria integrar múltiplas ferramentas especializadas de IA de forma coesa no fluxo de trabalho jurídico, mantendo a supervisão humana nas decisões críticas.</span>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="right-column">
+                    <div class="compare-container">
+                        <h3 class="text-xl font-medium mb-5 text-center text-purple-300">Comparação com o Cenário de Curto Prazo</h3>
+                        
+                        <div class="compare-row">
+                            <div class="compare-label">Velocidade da Transformação</div>
+                            <div class="compare-content text-sm text-gray-300">
+                                Mais gradual e previsível, permitindo adaptação progressiva dos profissionais e instituições jurídicas.
+                            </div>
+                        </div>
+                        
+                        <div class="compare-row">
+                            <div class="compare-label">Natureza da Assistência</div>
+                            <div class="compare-content text-sm text-gray-300">
+                                IA como ferramenta especializada para tarefas específicas, não como substituição completa de papéis jurídicos complexos.
+                            </div>
+                        </div>
+                        
+                        <div class="compare-row">
+                            <div class="compare-label">Intervenção Humana</div>
+                            <div class="compare-content text-sm text-gray-300">
+                                Maior necessidade de supervisão e orientação humana, com profissionais mantendo controle sobre decisões estratégicas.
+                            </div>
+                        </div>
+                        
+                        <div class="compare-row">
+                            <div class="compare-label">Perfil Profissional</div>
+                            <div class="compare-content text-sm text-gray-300">
+                                Evolução gradual das competências, com foco em especialização jurídica combinada com conhecimento tecnológico.
+                            </div>
+                        </div>
+                        
+                        <div class="compare-row">
+                            <div class="compare-label">Impacto no Mercado</div>
+                            <div class="compare-content text-sm text-gray-300">
+                                Redistribuição em vez de disrupção completa, com oportunidades para novos modelos híbridos de serviços jurídicos.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="integration-diagram">
+                        <h4 class="text-base font-medium mb-3 text-purple-300">Integração de Ferramentas de IA no Fluxo Jurídico</h4>
+                        
+                        <div class="diagram-row">
+                            <div class="diagram-item">IA Pesquisa Jurídica</div>
+                            <div class="diagram-arrow"><i class="fas fa-arrow-right"></i></div>
+                            <div class="diagram-item">IA Análise Documental</div>
+                        </div>
+                        
+                        <div class="diagram-row">
+                            <i class="fas fa-user-circle text-xl text-purple-400"></i>
+                            <span class="mx-2 text-xs text-gray-400">Supervisão humana</span>
+                            <i class="fas fa-user-circle text-xl text-purple-400"></i>
+                        </div>
+                        
+                        <div class="diagram-row">
+                            <div class="diagram-item">IA Redação</div>
+                            <div class="diagram-arrow"><i class="fas fa-arrow-left"></i></div>
+                            <div class="diagram-item">IA Análise Preditiva</div>
+                        </div>
+                        
+                        <p class="text-xs text-gray-400 mt-2 text-center">
+                            Orquestração de múltiplas ferramentas especializadas sob coordenação humana
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div id="navigation" style="position: fixed; bottom: 10px; right: 10px; z-index: 1000; background-color: rgba(255, 255, 255, 0.8); padding: 5px; border-radius: 5px;"></div>
+<script>
+    (function() {
+        const totalSlides = 15;
+        const path = window.location.pathname;
+        const filename = path.substring(path.lastIndexOf('/') + 1);
+        const match = filename.match(/^(\d{3})_cenarios\.html$/);
+
+        if (!match) return;
+
+        const currentSlide = parseInt(match[1], 10);
+        const navContainer = document.getElementById('navigation');
+
+        if (!navContainer) return;
+
+        let prevHtml = '';
+        let nextHtml = '';
+
+        if (currentSlide > 0) {
+            const prevSlideNum = (currentSlide - 1).toString().padStart(3, '0');
+            prevHtml = `<a href="${prevSlideNum}_cenarios.html" style="text-decoration: none; margin-right: 10px;">< Anterior</a>`;
+        } else {
+            prevHtml = `<span style="color: grey; margin-right: 10px;">< Anterior</span>`;
+        }
+
+        if (currentSlide < totalSlides - 1) {
+            const nextSlideNum = (currentSlide + 1).toString().padStart(3, '0');
+            nextHtml = `<a href="${nextSlideNum}_cenarios.html" style="text-decoration: none;">Próximo ></a>`;
+        } else {
+            nextHtml = `<span style="color: grey;">Próximo ></span>`;
+        }
+
+        navContainer.innerHTML = prevHtml + nextHtml;
+    })();
+</script>
+</body>
+</html>
